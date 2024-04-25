@@ -194,7 +194,9 @@ const NavBar = () =>{
                     onClick={handleCloseNavMenu}
                     onMouseEnter={() => hoverEnterHandler(index)}
                     onMouseLeave={() => hoverLeaveHandler(index)}
-                    sx={{ mr: 2,my: 2, color: `${isHovered[index] === true? "black":"white"}`, display: 'block',fontWeight:"700" }}
+                    sx={{ mr: 2,my: 2, '&:hover': {
+                      color: "black",
+                      }, color: "white",display: 'block',fontWeight:"700" }}
                   >
                     {page}
                   </Button>
